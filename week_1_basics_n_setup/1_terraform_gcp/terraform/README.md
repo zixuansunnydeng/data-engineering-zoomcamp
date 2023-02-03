@@ -5,8 +5,14 @@
 ### Execution
 
 ```shell
+# remember to globally authenticate gcloud your cli
+gcloud init
+
 # Refresh service-account's auth-token for this session
 gcloud auth application-default login
+# alternative one
+gcloud auth login
+# KEEP EYE ON YOUR GOOGLE ACCOUNT LOGIN AND PROJECT SELECT!
 
 # Initialize state file (.tfstate)
 terraform init

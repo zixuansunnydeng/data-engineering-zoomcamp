@@ -1,24 +1,27 @@
 locals {
-  data_lake_bucket = "dtc_data_lake"
+  data_lake_bucket = "de-zoomcamp-2023"
 }
 
-variable "project" {
-  description = "Your GCP Project ID"
+variable "gcp-credentials_path" {
+  description = "Path to GCP credentials file"
+  type        = string
+  default     = "/Users/sunnyd/Downloads/shaped-manifest-376405-a15fbf66ab97.json"
 }
 
-variable "region" {
+variable "gcp_project_id" {
+  description = "GCP Project ID"
+  type        = string
+  default     = "shaped-manifest-376405"
+}
+
+variable "gcp_region" {
   description = "Region for GCP resources. Choose as per your location: https://cloud.google.com/about/locations"
-  default = "europe-west6"
-  type = string
+  default     = "us-west1"
+  type        = string
 }
 
-variable "storage_class" {
-  description = "Storage class type for your bucket. Check official docs for more info."
-  default = "STANDARD"
-}
-
-variable "BQ_DATASET" {
+variable "bigquery_dataset" {
   description = "BigQuery Dataset that raw data (from GCS) will be written to"
-  type = string
-  default = "trips_data_all"
+  type        = string
+  default     = "ny_taxi_trips"
 }

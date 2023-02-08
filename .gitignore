@@ -5,6 +5,7 @@
 *.tfstate.*
 **.terraform
 **.terraform.lock.*
+**.tf
 **google_credentials.json
 **logs/
 **.env
